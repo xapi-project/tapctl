@@ -19,4 +19,7 @@ depends: [
   "oasis" {build}
   "xapi-stdext" {>= "2.0.0"}
   "xapi-forkexecd"
+  "rpc"
+  "base-threads"
+  "xapi-stdext"
 ]
