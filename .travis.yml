@@ -11,17 +11,14 @@ before_install:
     - git clone https://github.com/xapi-project/xs-opam && cd xs-opam && sh into_repo.sh && cd -
 install:
   - wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-opam.sh
-  - wget https://raw.githubusercontent.com/simonjbeaumont/ocaml-travis-coveralls/master/travis-coveralls.sh
 script:
     - bash -ex .travis-opam.sh
-    - if [ ! -z ${XS_COV} ]; then bash -ex travis-coveralls.sh || true; fi
 env:
   global:
     - OCAML_VERSION=4.02
     - PACKAGE=xapi-tapctl
-    - TESTS=true
   matrix:
-    - BASE_REMOTE=$TRAVIS_BUILD_DIR/xs-opam XS_COV=1 COV_CONF="./configure"
+    - BASE_REMOTE=$TRAVIS_BUILD_DIR/xs-opam
     - EXTRA_REMOTES=$TRAVIS_BUILD_DIR/xs-opam
 matrix:
   fast_finish: true
