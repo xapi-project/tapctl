@@ -15,8 +15,8 @@ remove: [
   ["ocamlfind" "remove" "tapctl"]
 ]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
+  "oasis" {build}
   "xapi-stdext" {>= "2.0.0"}
   "xapi-forkexecd"
-  "oasis" {build}
-] 
+]
