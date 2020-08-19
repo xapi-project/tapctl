@@ -21,7 +21,7 @@ clean:
 	dune clean
 
 test:
-	dune runtest
+	printf "\n\n\nNO TESTS\n\n\n"
 
 lint:
 	pycodestyle bin/nbd/*.py

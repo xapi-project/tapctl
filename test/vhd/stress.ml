@@ -30,5 +30,5 @@ let test_set =
   [ t "VDI with a large allocated extent list" `Quick test_huge_input ]
 
 let () =
-  Alcotest.run "stress test"
+  Lwt_main.run @@ Alcotest_lwt.run "stress test"
     [ "Nbd_input", test_set ]
