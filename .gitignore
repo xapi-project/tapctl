@@ -4,3 +4,8 @@ _build
 
 *.rej
 *.orig
+
+# python
+*__pycache__/
+*.pyc
+*.pyo
